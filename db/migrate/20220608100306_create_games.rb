@@ -5,6 +5,7 @@ class CreateGames < ActiveRecord::Migration[7.0]
       t.references :player_o
       t.boolean :over, null: false, default: false
       t.string :cells, array: true
+      t.string :turn
 
       t.timestamps
     end

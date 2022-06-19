@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_124028) do
     t.integer "player_o_id"
     t.boolean "over", default: false, null: false
     t.string "cells"
+    t.string "turn"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["player_o_id"], name: "index_games_on_player_o_id"
