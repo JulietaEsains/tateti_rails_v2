@@ -11,11 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_06_08_124028) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "games", force: :cascade do |t|
-    t.integer "player_x_id", null: false
-    t.integer "player_o_id"
+    t.bigint "player_x_id", null: false
+    t.bigint "player_o_id"
     t.boolean "over", default: false, null: false
-    t.string "cells"
+    t.string "cells", array: true
     t.string "turn"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
