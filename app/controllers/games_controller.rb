@@ -43,7 +43,7 @@ class GamesController < ApplicationController
         save game, 201
     end
 
-    # PATCH/PUT /games/:id
+    # PATCH /games/:id
     # La partida se actualiza de dos maneras posibles
     def update
         # 1- Uno de los dos jugadores cambia una celda

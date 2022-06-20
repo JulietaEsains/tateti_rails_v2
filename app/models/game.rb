@@ -1,4 +1,5 @@
 class Game < ApplicationRecord
+    # quien crea una partida es X, quien se une a una partida es O
     belongs_to :player_x, class_name: 'User'
     belongs_to :player_o, class_name: 'User', required: false
 
@@ -7,6 +8,7 @@ class Game < ApplicationRecord
 
     before_create :set_board, :set_turn
 
+    # inicialmente el tablero, representado por un arreglo de 9 elementos, está vacío
     def set_board
         self.cells = ['', '', '',
                       '', '', '',
