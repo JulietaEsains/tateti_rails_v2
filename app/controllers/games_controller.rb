@@ -55,6 +55,9 @@ class GamesController < ApplicationController
             if (over = updates[:over])
                 game.over = over
             end
+            if (turn = updates[:turn])
+                game.turn = turn
+            end
             save game
         else # 2- El jugador O se une a la partida
             game = Game.find(params[:id])
